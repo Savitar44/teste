@@ -1,4 +1,5 @@
 #!/bin/bash
+pkg install openssh && pkg install dropbear
 clear
 echo -e "\033[0;34mDigite seu ip: \033[0m"
 read ip
