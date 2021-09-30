@@ -1,5 +1,4 @@
 #!/bin/bash
-pkg install openssh && pkg install openssh && pkg install dropbear
 clear
 echo -e "\033[0;34mDigite seu ip: \033[0m"
 read ip
@@ -17,3 +16,11 @@ echo -e "\033[0;32mIniciando Servidor SSH...\033[0m"
 sleep 3s
 clear
 ssh -p $port $user@$ip
+clear
+echo -e "\033[0;32mParando Servidor...\033[0m"
+sleep 2s
+clear
+echo -e "\033[1;31mRetornando...\033[0m"
+sleep 2s
+curl -sO https://raw.githubusercontent.com/Savitar44/teste/main/run.sh && chmod 777 run.sh && ./run.sh
+
