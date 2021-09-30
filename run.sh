@@ -1,14 +1,14 @@
 #!/bin/bash
 clear
-echo -e "\033[0;31mDigite seu ip: \033[0m"
+echo -e "\033[0;34mDigite seu ip: \033[0m"
 read ip
 sleep 2s
 echo -e
-echo -e "\033[0;31mDigite sua porta: \033[0m"
+echo -e "\033[0;34mDigite sua porta: \033[0m"
 read port
 sleep 2s
 echo -e
-echo -e "\033[0;31mDigite seu usuário: \033[0m"
+echo -e "\033[0;34mDigite seu usuário: \033[0m"
 read user
 sleep 2s
 clear
