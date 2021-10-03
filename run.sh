@@ -17,7 +17,6 @@ clear
 echo -e "${GREEN}Iniciando Servidor SSH...${SC}"
 sleep 2s
 ssh -p $port $user@$ip
-clear
 read -p "$(echo -e $RED"Deseja desconectar o Servidor SSH (s/n)? "$SC)" sn
    case $sn in
    [Ss]*)
@@ -27,11 +26,4 @@ read -p "$(echo -e $RED"Deseja desconectar o Servidor SSH (s/n)? "$SC)" sn
    [Nn]*)
    curl -sO https://raw.githubusercontent.com/Savitar44/teste/main/run.sh && chmod 777 run.sh && ./run.sh
    ;;
-   *) echo -e "${RED}Opção inválida! ${SC}"
-   echo -e
-   sleep 3s
-   echo -e "${RED}Retornando...${SC}"
-   sleep 3s
-   curl -sO https://raw.githubusercontent.com/Savitar44/teste/main/run.sh && chmod 777 run.sh && ./run.sh
-
 esac
