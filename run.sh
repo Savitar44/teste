@@ -1,29 +1,14 @@
 #!/bin/bash
-BLUE='\033[0;34m'
-RED='\033[1;31m'
-GREEN='\033[0;32m'
-SC='\033[0m'
-
 clear
-read -p "$(echo -e $BLUE"Digite seu ip: "$SC)" ip
+read -p "Digite seu ip: " ip
 sleep 2s
 echo -e
-read -p "$(echo -e $BLUE"Digite sua porta: "$SC)" port
+read -p "Digite seu usuário: " user
 sleep 2s
 echo -e
-read -p "$(echo -e $BLUE"Digite seu usuário: "$SC)" user
+read -p "Digite sua porta: " port
 sleep 2s
 clear
-echo -e "${GREEN}Iniciando Servidor SSH...${SC}"
+echo -e "\033[0;34mIniciando Servidor SSH...\033[0m"
 sleep 2s
 ssh -p $port $user@$ip
-read -p "$(echo -e $RED"Deseja desconectar o Servidor SSH (s/n)? "$SC)" sn
-   case $sn in
-   [Ss]*)
-   clear
-   exit
-   ;;
-   [Nn]*)
-   curl -sO https://raw.githubusercontent.com/Savitar44/teste/main/run.sh && chmod 777 run.sh && ./run.sh
-   ;;
-esac
