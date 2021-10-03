@@ -33,6 +33,24 @@ sleep 2s
 clear
 echo -e "\033[0;34mIniciando Servidor SSH...\033[0m"
 sleep 2s
-ssh -p $port $user@$i
+ssh -p $port $user@$ip
+
+case $sn in
+   [Ss]*)
+   clear
+   echo -e "${GREEN}Instalando OPENSSH...${SC}"
+   echo -e
+   sleep 3s
+   pkg install openssh
+   clear
+   echo -e "${GREEN}Instalando DROPBEAR...${SC}"
+   echo -e
+   sleep 3s
+   pkg install dropbear
+   clear
+   ;;
+   [Nn]*)
+   clear
+   ;;
 
 esac
