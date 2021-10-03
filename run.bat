@@ -33,4 +33,6 @@ sleep 2s
 clear
 echo -e "\033[0;34mIniciando Servidor SSH...\033[0m"
 sleep 2s
-ssh -p $port $user@$ip
+ssh -p $port $user@$i
+
+esac
