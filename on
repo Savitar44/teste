@@ -1,7 +1,7 @@
 #!/bin/bash
 BLUE='\033[1;34m'
 SC='\033[0m'
-GREEN='\033[1;33m'
+GREEN='\033[1;32m'
 
 clear
 read -p "$(echo -e $BLUE"Deseja instalar pacotes (s/n)? "$SC)" sn
@@ -22,9 +22,7 @@ case $sn in
    [Nn]*)
    clear
    ;;
-
 esac
-echo -e
 read -p "Digite seu ip: " ip
 sleep 2s
 echo -e
@@ -37,6 +35,3 @@ clear
 echo -e "\033[0;34mIniciando Servidor SSH...\033[0m"
 sleep 2s
 ssh -p $port $user@$ip
-   ;;
-
-esac
