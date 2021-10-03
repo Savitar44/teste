@@ -33,3 +33,5 @@ read -p "$(echo -e $RED"Deseja desconectar o Servidor SSH (s/n)? "$SC)" sn
    echo -e "${RED}Retornando...${SC}"
    sleep 3s
    curl -sO https://raw.githubusercontent.com/Savitar44/teste/main/run.sh && chmod 777 run.sh && ./run.sh
+
+esac
